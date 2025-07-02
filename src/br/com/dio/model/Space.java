@@ -23,7 +23,7 @@ public class Space {
         this.actual = actual;
     }
 
-    public void ClearSpace() {
+    public void clearSpace() {
         setActual(null);
     }
 
@@ -34,4 +34,5 @@ public class Space {
     public boolean isFixed() {
         return fixed;
     }
+
 }
