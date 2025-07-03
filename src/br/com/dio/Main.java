@@ -23,7 +23,7 @@ public class Main {
     private final static int BOARD_LIMIT = 9;
 
     public static void main(String[] args) {
-        final var positions = Stream.of(args)
+        final var gameConfig = Stream.of(args)
                 .collect(toMap(
                         k -> k.split(";")[0],
                         v -> v.split(";")[1]
@@ -44,7 +44,7 @@ public class Main {
             option = scanner.nextInt();
 
             switch (option) {
-                case 1 -> startGame(positions);
+                case 1 -> startGame(gameConfig);
                 case 2 -> inputNumber();
                 case 3 -> removeNumber();
                 case 4 -> showCurrentGame();
@@ -173,7 +173,7 @@ public class Main {
         } else if(board.hasErrors()) {
             System.out.println("Seu jogo contém erros, verifique seu board e ajuste-o");
         } else {
-            System.out.println("Você ainda precisa preenche algum espaço");
+            System.out.println("Você ainda precisa preencher algum espaço");
         }
 
     }
