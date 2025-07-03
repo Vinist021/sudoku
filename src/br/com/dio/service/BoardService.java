@@ -10,9 +10,11 @@ import java.util.Map;
 
 public class BoardService {
 
-    private final static int BOARD_LIMIT = 9;
+    public final static int BOARD_LIMIT = 9;
 
     private final Board board;
+
+
 
     public BoardService(final Map<String, String> gameConfig) {
         board = new Board(initBoard(gameConfig));
@@ -53,4 +55,6 @@ public class BoardService {
 
         return spaces;
     }
+
+
 }
